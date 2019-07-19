@@ -1,0 +1,17 @@
+node {
+    stage('preparation') {
+        git branch: 'v1', url: 'https://github.com/Akasam/samplephpwebsite'
+    }
+
+    stage("composer") {
+        sh 'composer install'
+    }
+    
+    stage("phpunit") {
+        sh 'vendor/bin/phpunit --bootstrap vendor/autoload.php tests/Test'
+    }
+
+    stage("dockerise"){
+        sh 'docker-compose up -d'
+    }
+}
