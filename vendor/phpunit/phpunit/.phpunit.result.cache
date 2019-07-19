@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":126:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:2:{s:13:"Test::testSum";d:0.006;s:37:"Test::testCanCalculateSumOfOnePlusOne";d:0.006;}}}
